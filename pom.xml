@@ -243,9 +243,12 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Export-Package>org.foo.myproject.api</Export-Package>
-                        <Private-Package>org.foo.myproject.*</Private-Package>
-                        <Bundle-Activator>org.foo.myproject.impl1.Activator</Bundle-Activator>
+                        <Bundle-Version>${project.version}</Bundle-Version>
+                        <Export-Package>org.ryan.osgi</Export-Package>
+                        <Private-Package>org.apache.felix.log.impl</Private-Package>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Activator>${pom.artifactId}.impl.Activator</Bundle-Activator>
+                        <Export-Service>org.osgi.service.log.LogService,org.osgi.service.log.LogReaderService</Export-Service>
                     </instructions>
                 </configuration>
             </plugin>
